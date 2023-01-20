@@ -15,8 +15,17 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AnalyticsComponent } from './forms/analytics/analytics.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router'
+import { IndexComponent } from './components/index/index.component';
+import { FilterDataComponent } from './filter-data/filter-data.component';
 
+import { OutputShowComponentComponent } from './output-show-component/output-show-component.component';
 
+const appRoutes: Routes = [
+  {path: '', component: IndexComponent},
+  {path: 'filter', component: FilterDataComponent},
+  {path: 'output-show/:id', component: OutputShowComponentComponent}
+]
 
 
 library.add(fas);
@@ -30,13 +39,17 @@ library.add(fas);
     OutputDataComponent,
     InputComponent,
     AnalyticsComponent,
+    IndexComponent,
+    FilterDataComponent,
+    OutputShowComponentComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
     NoopAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

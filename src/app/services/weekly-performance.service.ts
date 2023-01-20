@@ -26,6 +26,13 @@ export class WeeklyPerformanceService {
     return exercise
   }
 
+  getById = (id : number) : Observable<WorkoutOutput> => {
+    let exercise_id : Observable<WorkoutOutput>
+
+    exercise_id = this.http.get<WorkoutOutput>(`${this.baseUrl}/exercise_sessions/${id}`, httpOptions)
+    return exercise_id
+  }
+
 
    //caloriesBurned - name of variable
   totalCaloriesBurned = (caloriesBurned: WorkoutOutput[]):number => {

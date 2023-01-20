@@ -1,0 +1,24 @@
+<div class="container">
+  
+    <div class="parent">
+  
+      <div class="child01">
+        <forms-input (formEvent)="formEventHandler($event)"></forms-input>
+      </div>
+  
+      <div class="child02">
+        <!-- [] - property app-analytics
+        "" - property ng parent  -->
+        <app-analytics [totalCaloriesBurned]="totalCaloriesBurned" [aveCaloriesBurned]="aveCalories"></app-analytics>
+      </div>
+      
+  
+    </div>
+    
+    <div class="mt-3"></div> 
+    
+    <forms-output [exerciseResult]="exerciseData"></forms-output>
+  
+   
+  
+  </div>
