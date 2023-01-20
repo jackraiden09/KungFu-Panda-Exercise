@@ -1,0 +1,47 @@
+{
+
+    "exercise_sessions": [
+
+        {
+            "id": 1,
+            "exerciseType": "Treadmill",
+            "date": "2023-01-19",
+            "startTimeResult": "15:00",
+            "endTimeResult": "16:00",
+            "caloriesBurnedResult": 243,
+            "caloriesBurnedGoalResult": 432
+        }, 
+        {
+            "id": 2,
+            "exerciseType": "Bicycle",
+            "date": "2023-01-20",
+            "startTimeResult": "14:00",
+            "endTimeResult": "15:00",
+            "caloriesBurnedResult": 430,
+            "caloriesBurnedGoalResult": 520 
+            
+        }
+    ],
+
+    "exercise_analytics" : 
+    [
+        {
+            "id": 1,
+            "totalCaloriesBurned": 430,
+            "totalExerciseTime": 4,
+            "mostExerciseType:": "Bicycle",
+            "longestExerciseDay": "Monday",
+            "highiestCaloriesBurned": 500
+        },
+
+        {
+            "id": 2,
+            "totalCaloriesBurned": 530,
+            "totalExerciseTime": 3,
+            "mostExerciseType:": "Treadmill",
+            "longestExerciseDay": "Tuesday",
+            "highiestCaloriesBurned": 700
+        }
+    ]
+
+}

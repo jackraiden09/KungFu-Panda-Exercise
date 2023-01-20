@@ -1,0 +1,59 @@
+
+<div class="card-body"  *ngFor="let deleteWorkout of WorkoutOutput">
+  <div *ngIf="WorkoutOutput.length == 0">
+    <p>Empty</p>
+   </div>
+      
+    <div class="row" >
+        <div class="col-2">
+          <div class="form-group">
+            <label>Exercise Type</label>
+            <h6>{{workoutData.exerciseType}} {{deleteWorkout.exerciseType}}</h6>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <div class="form-group">
+            <label>Date</label>
+            <h6>{{workoutData.date}}</h6>
+          </div>
+        </div>
+
+        <div class="col-2"> 
+          <div class="form-group">
+            <label>Start Time</label>
+            <h6>{{workoutData.startTimeResult}} {{deleteWorkout.startTimeResult}}</h6>
+            <!-- <input type="text" class="form-control" disabled>  -->
+          </div>
+        </div>
+
+        <div class="col-2">
+            <div class="form-group">
+              <label>End Time</label>
+              <h6>{{workoutData.endTimeResult}} {{deleteWorkout.endTimeResult}}</h6>
+              <!-- <input type="text" class="form-control" disabled> -->
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class="form-group">
+              <label>Calories Burned</label>
+              <h6>{{workoutData.caloriesBurnedResult}} {{deleteWorkout.caloriesBurnedResult}}</h6>
+              <!-- <input type="text" class="form-control" disabled> -->
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class="form-group">
+              <label>Calories Goal</label>
+              <h6>{{workoutData.caloriesBurnedGoalResult}} {{deleteWorkout.caloriesBurnedGoalResult}}</h6>
+              <!-- <input type="text" class="form-control" disabled> -->
+            </div>
+        </div>
+    </div> 
+    <!-- <button type="button" class="btn btn-warning">Edit Workout</button> -->
+    <button type="button" class="btn btn-danger" (click)="deleteAllRows()">Delete Workout</button> 
+</div>
+
+
+
