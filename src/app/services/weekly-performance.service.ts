@@ -1,14 +1,33 @@
 import { Injectable } from '@angular/core';
 import { WorkoutOutput } from '../dbmodels/workout-output';
+import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { Observable } from 'rxjs';
+
+//pwede sa ibang component e
+// top level
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-type': 'application/json'
+  })
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeeklyPerformanceService {
 
-  constructor() { }
+  baseUrl: string = 'http://localhost:5000'
+  constructor(private http: HttpClient) { }
 
-  //caloriesBurned - name of variable
+  getAll = (): Observable<WorkoutOutput[]> => {
+    let exercise: Observable<WorkoutOutput[]> 
+    exercise = this.http.get<WorkoutOutput[]>(`${this.baseUrl}/exercise_sessions`, httpOptions)
+
+    return exercise
+  }
+
+
+   //caloriesBurned - name of variable
   totalCaloriesBurned = (caloriesBurned: WorkoutOutput[]):number => {
     let total = 0
 

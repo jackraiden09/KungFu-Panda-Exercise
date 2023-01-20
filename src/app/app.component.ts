@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { WorkoutOutput } from './dbmodels/workout-output';
 import { WeeklyPerformanceService } from './services/weekly-performance.service';
@@ -8,19 +8,28 @@ import { WeeklyPerformanceService } from './services/weekly-performance.service'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'workout-application';
-
-
-  constructor (private weeklyPerformanceService: WeeklyPerformanceService ) {
-
-  }
- 
   exerciseData: WorkoutOutput[] = [];
   totalCaloriesBurned: number = 0
   aveCalories: number = 0
 
 
+  constructor (private weeklyPerformanceService: WeeklyPerformanceService, 
+    private performanceData: WeeklyPerformanceService ) {
+  }
+
+  ngOnInit(): void {
+    console.log("ngOnInt() fire for App Component")
+    //callback function pag natapos na
+    //tinawag si getall
+    //subscribe callback function
+    this.weeklyPerformanceService.getAll().subscribe((exerciseData) => {
+      this.exerciseData = exerciseData
+    })
+    
+  }
+ 
 
   //() - function
   //test muna kung gumagana bago mag populate ng code

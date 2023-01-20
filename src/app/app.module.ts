@@ -14,6 +14,7 @@ import { OutputDataComponent } from './forms/output/output-data/output-data.comp
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AnalyticsComponent } from './forms/analytics/analytics.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -34,7 +35,8 @@ library.add(fas);
     BrowserModule,
     FontAwesomeModule,
     NoopAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,6 +20,17 @@
             "caloriesBurnedResult": 430,
             "caloriesBurnedGoalResult": 520 
             
+        },
+
+        {
+            "id": 3,
+            "exerciseType": "Bicycle",
+            "date": "2023-01-21",
+            "startTimeResult": "12:00",
+            "endTimeResult": "13:00",
+            "caloriesBurnedResult": 520,
+            "caloriesBurnedGoalResult": 423 
+            
         }
     ],
 
@@ -32,15 +43,6 @@
             "mostExerciseType:": "Bicycle",
             "longestExerciseDay": "Monday",
             "highiestCaloriesBurned": 500
-        },
-
-        {
-            "id": 2,
-            "totalCaloriesBurned": 530,
-            "totalExerciseTime": 3,
-            "mostExerciseType:": "Treadmill",
-            "longestExerciseDay": "Tuesday",
-            "highiestCaloriesBurned": 700
         }
     ]
 
